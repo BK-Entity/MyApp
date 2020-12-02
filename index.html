@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Genny</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="parentGrid">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child">
+            <!-- Need Alignment Chart to go here! -->
+            <img src="alignmentChart.png" alt="Example: Chaotic Good, Neutral, True Neutral, Etc.">
+        </div>
+    </div>
+    <!-- First step would take in Name, Faith, Gender, Alignment, and Race -->
+    <form class="form1" id="form1">
+        <table>
+            <th>
+                <td>Character Details</td>
+            </th>
+            <tr>
+                <td><label for="name">Name: </label></td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="faith">Faith: </label></td>
+                <td><input type="text" name="faith" id="faith"></td>
+                <td><p>Example: Deity like Zeus or Thor</p></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender: </label></td>
+                <td><input type="text" name="gender" id="gender"></td>
+            </tr>
+            <tr>
+                <td><label for="alignment">Alignment: </label></td>
+                <td><input type="text" name="alignment" id="alignment"></td>
+            </tr>
+            <tr>
+                <!-- Race determines Age, Speed, Language, and can set alignment if not set already -->
+                <td><label for="race">Race: </label></td>
+                <td><input type="text" name="race" id="race"></td>
+                <td><p>Races include: <em>Elf, Dark Elf, Wood Elf, Dwarf, Gnome, Human, Hobbit, Gnome, Dragonborn, Hakfling, Half Orc, Tiefling</em></p></td>
+            </tr>
+            <tr>
+                <td><label for="charClass">Class: </label></td>
+                <td><input type="text" name="charClass" id="charClass"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Submit" onclick="saveCharacter()"></td>
+                <td><input type="button" value="Reset" onclick="reset()"></td>
+                <td><input type="button" value="Set" onclick="set()"></td>
+            </tr>
+        </table>
+    </form>
+    <!-- Once submitted, it will display part2 which would be where character class is decided -->
+    <form class="form2" id="form2" onsubmit="return saveClass()">
+        <th>
+            <td>Character Stats</td>
+        </th>
+        <tr>
+            <td><p>To determine your character stats refer to this chart</p></td>
+            <td><label for="strength">Strength: </label></td>
+            <td><input type="number" name="strength" id="strength"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="intelligence">Intelligence: </label></td>
+            <td><input type="number" name="intelligence" id="intelligence"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="wisdom">Wisdom: </label></td>
+            <td><input type="number" name="wisdom" id="wisdom"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="dexterity">Dexterity: </label></td>
+            <td><input type="number" name="dexterity" id="dexterity"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="constitution">Constitution: </label></td>
+            <td><input type="number" name="constitution" id="constitution"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="charisma">Charisma: </label></td>
+            <td><input type="number" name="charisma" id="charisma"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="comeliness">Comeliness: </label></td>
+            <td><input type="number" name="comeliness" id="comeliness"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+    </form>
+</body>
+</html>
